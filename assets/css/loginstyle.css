@@ -1,0 +1,230 @@
+@charset "UTF-8";
+/*Перевод в друшие величины*/
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100;300;400;500;600;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+:root {
+  --font-family: "Alumni Sans", sans-serif;
+  --color-white: rgba(255, 255, 255, 1);
+  --color-white-100: rgba(237, 237, 237, 1);
+  --color-grey: rgba(186, 185, 185, 1);
+  --color-grey-100: rgba(204, 222, 223, 1);
+  --color-grey-200: rgba(204, 222, 223, 0.5);
+  --color-green: rgba(69, 162, 158, 1);
+  --color-green-100: rgba(69, 162, 158,0.5);
+  --color-blue: rgba(38, 65, 85, 1);
+  --color-blue-100: rgba(38, 65, 85, 0.5);
+  --color-blue-200: rgba(31, 40, 51, 1);
+  --color-black: rgba(0, 0, 0, 1);
+}
+
+/* Preloader */
+#page-preloader {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: whitesmoke;
+  z-index: 10;
+}
+
+#page-preloader .spinner {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: url("/assets/img/login/load.gif") no-repeat 50% 50%;
+  margin: -100px 0 0 -100px;
+}
+
+/* Wrapper */
+.wrapper {
+  max-width: 39.375rem;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* Login Form */
+#main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px 30px;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-blue);
+}
+
+.container {
+  max-width: 39.375rem;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 0.9375rem;
+}
+
+.content {
+  background-color: var(--color-white-100);
+  border-radius: 0.625rem;
+  padding: 6.25rem;
+}
+
+.header__avatar {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.header__title {
+  font-size: 36px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.avatar img {
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+}
+
+.form__login {
+  background-color: var(--color-blue-200);
+  margin-right: 10px;
+}
+.form__login:hover {
+  background-color: var(--color-blue);
+}
+
+input[type=text],
+input[type=password] {
+  width: 100%;
+  padding: 0.9375rem;
+  border: none;
+  border-radius: 0.625rem;
+  font-size: 1.125rem;
+  border: 1px solid var(--color-grey-200);
+  margin-bottom: 1.25rem;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+  outline: none;
+  border: 1px solid var(--color-blue);
+  background-color: var(--color-white);
+}
+
+button {
+  width: 100%;
+  padding: 0.9375rem;
+  border: none;
+  border-radius: 0.625rem;
+  font-size: 1.125rem;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 490px) {
+  .content {
+    padding: 3.125rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .content {
+    padding: 2.5rem;
+  }
+}
