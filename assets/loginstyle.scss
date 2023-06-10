@@ -11,7 +11,7 @@
 	top: 0;
 	right: 0;
 	bottom: 0;
-	background: whitesmoke;
+	background: var(--color-grey);
 	z-index: 10;
 }
 
@@ -33,15 +33,28 @@
 }
 
 /* Login Form */
-#main {
-	max-width: 600px;
-	margin: 0 auto;
-	padding: 60px 30px;
-}
+// #main {
+// 	max-width: 600px;
+// 	margin: 0 auto;
+// 	padding: 60px 30px;
+// }
 
 body {
 	font-family: var(--font-family);
 	background-color: var(--color-blue);
+	animation: background-animation 2s ease-in-out;
+}
+
+@keyframes background-animation {
+	0% {
+		background-color: vvar(--color-grey);
+	}
+	50% {
+		background-color: var(--color-blue-100);
+	}
+	100% {
+		background-color: var(--color-blue);
+	}
 }
 
 .container {
@@ -50,8 +63,21 @@ body {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%) perspective(1000px) rotateX(90deg);
 	padding: rem(15);
+	animation: appear 1s ease-in-out forwards;
+	animation-delay: 1s;
+}
+
+@keyframes appear {
+	0% {
+			opacity: 0;
+			transform: translate(-50%, -50%) perspective(1000px) rotateX(90deg);
+	}
+	100% {
+			opacity: 1;
+			transform: translate(-50%, -50%) perspective(1000px) rotateX(0deg);
+	}
 }
 .content {
 	background-color: var(--color-white-100);

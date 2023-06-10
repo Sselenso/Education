@@ -115,7 +115,7 @@ h6 {
   top: 0;
   right: 0;
   bottom: 0;
-  background: whitesmoke;
+  background: var(--color-grey);
   z-index: 10;
 }
 
@@ -137,29 +137,76 @@ h6 {
 }
 
 /* Login Form */
-#main {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 60px 30px;
-}
-
 body {
   font-family: var(--font-family);
   background-color: var(--color-blue);
+  -webkit-animation: background-animation 2s ease-in-out;
+          animation: background-animation 2s ease-in-out;
 }
 
+@-webkit-keyframes background-animation {
+  0% {
+    background-color: vvar(--color-grey);
+  }
+  50% {
+    background-color: var(--color-blue-100);
+  }
+  100% {
+    background-color: var(--color-blue);
+  }
+}
+
+@keyframes background-animation {
+  0% {
+    background-color: vvar(--color-grey);
+  }
+  50% {
+    background-color: var(--color-blue-100);
+  }
+  100% {
+    background-color: var(--color-blue);
+  }
+}
 .container {
   max-width: 39.375rem;
   margin: 0 auto;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%) perspective(1000px) rotateX(90deg);
+          transform: translate(-50%, -50%) perspective(1000px) rotateX(90deg);
   padding: 0.9375rem;
+  -webkit-animation: appear 1s ease-in-out forwards;
+          animation: appear 1s ease-in-out forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) perspective(1000px) rotateX(90deg);
+            transform: translate(-50%, -50%) perspective(1000px) rotateX(90deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) perspective(1000px) rotateX(0deg);
+            transform: translate(-50%, -50%) perspective(1000px) rotateX(0deg);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) perspective(1000px) rotateX(90deg);
+            transform: translate(-50%, -50%) perspective(1000px) rotateX(90deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) perspective(1000px) rotateX(0deg);
+            transform: translate(-50%, -50%) perspective(1000px) rotateX(0deg);
+  }
+}
 .content {
   background-color: var(--color-white-100);
   border-radius: 0.625rem;
