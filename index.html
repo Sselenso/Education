@@ -1,59 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/icons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/icons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/icons/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/img/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/img/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/img/icons/favicon-16x16.png"
+    />
     <link rel="manifest" href="./assets/img/icons/site.webmanifest" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./assets/css/loginstyle.css">
+    <link rel="stylesheet" href="./assets/css/loginstyle.css" />
     <title>Login</title>
   </head>
   <body>
-			<div id="page-preloader"><span class="spinner"></span></div>
-			<!-- Wrapper -->
-			<div id="wrapper">			
-					<section id="main">
-						<div class="container">
-							<div class="content">
-								<header>
-									<div class="header__avatar">
-											<div class="avatar"><img src="./assets/img/login/user.svg" alt="аватар"></div>
-											<h1 class="header__title">Авторизация</h1>
-									</div>
-								</header>			
-								<div class="login__form">
-									<form method="post">														
-											<div class="form__field">
-												<input type="text" name="login__auth" maxlength="50" id="login" placeholder="Логин" required="">
-											</div>
-											<div class="form__field">
-												<input type="password" name="password__auth" maxlength="20" id="password" placeholder="Пароль" required="">
-											</div>
-											<div class="error-message"></div>		
-											<ul class="login__actions">
-													<li>
-															<button class="form__login" type="submit">войти</button>
-													</li>													
-											</ul>									
-									</form>		
-								</div>	
-							</div>	
-						</div>						
-					</section>
-			
-					<!-- Footer -->
-					<footer id="footer">
-							<p class="copyright"></p>
-					</footer>
-			</div>
+    <div id="page-preloader">
+      <div id="page__preloader">
+        <div class="spinner"></div>
+      </div>
+    </div>
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <section id="main">
+				
+        <div class="container">
+          <div class="content">
+            <header>
+              <div class="header__avatar">
+                <div class="avatar">
+                  <img src="./assets/img/login/user.svg" alt="аватар" />
+                </div>
+                <h1 class="header__title">Авторизация</h1>
+              </div>
+            </header>
+            <div class="login__form">
+              <form method="post">
+                <div class="form__field">
+                  <input
+                    type="text"
+                    name="login__auth"
+                    maxlength="50"
+                    id="login"
+                    placeholder="Логин"
+                    required=""
+                  />
+                </div>
+                <div class="form__field">
+                  <input
+                    type="password"
+                    name="password__auth"
+                    maxlength="20"
+                    id="password"
+                    placeholder="Пароль"
+                    required=""
+                  />
+                </div>
+                <div class="error-message"></div>
+                <ul class="login__actions">
+                  <li>
+                    <button class="form__login" type="submit">войти</button>
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
 
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><div id="app_root"></div>		
-			<script type="text/JavaScript" src="./assets/js/preloader.js"></script>
-			<script type="text/JavaScript" src="./assets/js/login.js"></script>
+      <!-- Footer -->
+      <footer id="footer">
+        <p class="copyright"></p>
+      </footer>
+    </div>
 
-
-	</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <div id="app_root"></div>
+    <script type="text/JavaScript" src="./assets/js/preloader.js"></script>
+    <script type="text/JavaScript" src="./assets/js/login.js"></script>
+  </body>
 </html>
