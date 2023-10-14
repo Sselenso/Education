@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "github-markdown-css": "^5.2.0",
+    "marked": "^9.0.3"
+  },
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}

@@ -12,7 +12,7 @@ $(document).ready(function() {
       for (var i = 0; i < lines.length; i++) {
         var line = lines[i];
 
-        if (pageContent.length + line.length > 3000) { // если текущая страница заполнена
+        if (pageContent.length + line.length > 4600) { // если текущая страница заполнена
           $('#body-text').append('<div id="page' + pagesCount + '" class="page">' + pageContent + '</div>'); // добавление страницы в блок #body-text
           pagesCount++;
           pageContent = '';

@@ -1,193 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/img/icons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/img/icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/img/icons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./assets/img/icons/site.webmanifest" />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<link rel="apple-touch-icon" sizes="180x180"
+			href="./assets/img/icons/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32"
+			href="./assets/img/icons/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16"
+			href="./assets/img/icons/favicon-16x16.png" />
+		<link rel="manifest" href="./assets/img/icons/site.webmanifest" />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./assets/css/index.css" />
-    <title>Main</title>
-  </head>
-  <body>
-    <div id="page-preloader">
-      <div id="page__preloader">
-        <div class="spinner"></div>
-      </div>
-    </div>
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="./assets/css/index.css" />
 
-    <!-- добавляем div для чата -->
-    <div id="chatbox">
-      <!-- кнопка закрытия чата -->
-      <div id="chatbox-close">&times;</div>
-      <!-- область сообщений -->
-      <div id="messages">
-        <ul id="message-list"></ul>
-      </div>
-      <!-- форма для отправки сообщений -->
-      <form id="message-form">
-        <input
-          id="message-input"
-          type="text"
-          placeholder="Введите ваше сообщение"
-        />
-        <button type="submit">Отправить</button>
-      </form>
-    </div>
+		<title>Main</title>
+	</head>
+	<body>
+		<div id="page-preloader">
+			<div id="page__preloader">
+				<div class="spinner"></div>
+			</div>
+		</div>
 
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Header -->
-      <header id="header">
-        <div class="container">
-          <div class="header">
-            <div class="header__logo">
-              <a href="./index.html">Education</a>
-            </div>
-            <div class="header__menu">
-              <ul class="menu">
-                <li class="menu__item">
-                  <a href="#" class="menu__link message-icon" data-badge="3">
-                    <img
-                      src="./assets/img/icons/free-icon-consulting-message.png"
-                      alt="envelope icon"
-                    />
-                    <span class="badge"></span>
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a
-                    href="#"
-                    class="menu__link notification-icon"
-                    data-modal="modal-notifications"
-                  >
-                    <img
-                      src="./assets/img/icons/free-icon-notification.png"
-                      alt="bell icon"
-                    />
-                  </a>
-                </li>
-                <li class="menu__item"></li>
-              </ul>
-              <div class="header__user">
-                <a href="#" class="user__link"
-                  ><img
-                    src="/assets/img/icons/free-icon-user.png"
-                    alt="user icon"
-                /></a>
+		<!-- добавляем div для чата -->
+		<div id="chatbox">
+			<!-- кнопка закрытия чата -->
+			<div id="chatbox-close">&times;</div>
+			<!-- область сообщений -->
+			<div id="messages">
+				<ul id="message-list"></ul>
+			</div>
+			<!-- форма для отправки сообщений -->
+			<form id="message-form">
+				<input id="message-input" type="text" placeholder="Введите ваше сообщение" />
+				<button type="submit">Отправить</button>
+			</form>
+		</div>
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+			<!-- Header -->
+			<header id="header">
+				<div class="container">
+					<div class="header">
+						<div class="header__logo">
+							<a href="./index.html">Education</a>
+						</div>
+						<div class="header__menu">
+							<!-- <ul class="menu">
+            <li class="menu__item">
+              <a href="#" class="menu__link message-icon" data-badge="3">
+                <img
+                  src="./assets/img/icons/free-icon-consulting-message.png"
+                  alt="envelope icon"
+                />
+                <span class="badge"></span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a
+                href="#"
+                class="menu__link notification-icon"
+                data-modal="modal-notifications"
+              >
+                <img
+                  src="./assets/img/icons/free-icon-notification.png"
+                  alt="bell icon"
+                />
+              </a>
+            </li>
+            <li class="menu__item"></li>
+          </ul>  -->
+							<div class="header__user">
+								<a href="#" class="user__link"><img
+										src="/assets/img/icons/free-icon-user.png" alt="user icon" /></a>
+							</div>
+						</div>
+
+						<!-- Модальное окно уведомлений -->
+						<div id="modal-notifications" class="modal">
+							<div class="modal-content">
+								<h4>Уведомления</h4>
+								<ul class="notifications-list">
+									<!-- Список уведомлений будет добавлен с помощью JavaScript -->
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="horizontal__line"></div>
+			</header>
+
+			<!-- <section id="main">
+    <div class="main__info">
+      <div class="container">
+        <div class="main__info-wrapper">
+          <div class="main__info-wrapper-title">стажировка</div>
+           <div class="main__info-wrapper-calendar wrap">
+            <div class="calendar">
+              <div class="calendar__header main__header">
+                <div class="calendar__header-start">начало: 15.05.23</div>
+                <div class="calendar__header-now">
+                  пройдено заданий 7/15
+                </div>
+                <div class="calendar__header-end">окончание: 05.06.23</div>
+              </div>
+              <div class="calendar__body">
+                <div class="calendar__body-day">
+                  <div class="calendar__body-day-title day">1</div>
+                  <div class="calendar__body-day-title day">2</div>
+                  <div class="calendar__body-day-title day">3</div>
+                  <div class="calendar__body-day-title day">4</div>
+                  <div class="calendar__body-day-title day">5</div>
+                  <div class="calendar__body-day-title day">6</div>
+                  <div class="calendar__body-day-title day">7</div>
+                  <div class="calendar__body-day-title day">8</div>
+                  <div class="calendar__body-day-title day">9</div>
+                  <div class="calendar__body-day-title day">10</div>
+                  <div class="calendar__body-day-title day">11</div>
+                  <div class="calendar__body-day-title day">12</div>
+                  <div class="calendar__body-day-title day">13</div>
+                  <div class="calendar__body-day-title day">14</div>
+                  <div class="calendar__body-day-title day">15</div>
+                </div>
+                <div class="calendar__line">
+                  <div class="calendar__line-wrap">
+                    <div class="calendar__line-point"></div>
+                    <div class="calendar__line-point"></div>
+                    <div class="calendar__line-point"></div>
+                    <div class="calendar__line-point"></div>
+                    <div class="calendar__line-point"></div>
+                    <div class="calendar__line-point"></div>
+                    <div class="calendar__line-point"></div>
+                    <div class="calendar__line-point"></div>
+                    <div class="calendar__line-point"></div>
+                    <div class="calendar__line-point"></div>
+                    <div class="calendar__line-point"></div>
+                    <div class="calendar__line-point"></div>
+                    <div class="calendar__line-point"></div>
+                    <div class="calendar__line-point"></div>
+                    <div class="calendar__line-point"></div>
+                  </div>
+                  <div class="calendar__line-hline"></div>
+                </div>
               </div>
             </div>
-
-            <!-- Модальное окно уведомлений -->
-            <div id="modal-notifications" class="modal">
-              <div class="modal-content">
-                <h4>Уведомления</h4>
-                <ul class="notifications-list">
-                  <!-- Список уведомлений будет добавлен с помощью JavaScript -->
-                </ul>
-              </div>
+          </div>               <div class="main__info-wrapper-achievements wrap">
+            <div class="achivments__header main__header">
+              <div class="achievements">достижения</div>
             </div>
           </div>
-        </div>
-        <div class="horizontal__line"></div>
-      </header>
-
-      <section id="main">
-        <div class="main__info">
-          <div class="container">
-            <div class="main__info-wrapper">
-              <div class="main__info-wrapper-title">стажировка</div>
-              <div class="main__info-wrapper-calendar wrap">
-                <div class="calendar">
-                  <div class="calendar__header main__header">
-                    <div class="calendar__header-start">начало: 15.05.23</div>
-                    <div class="calendar__header-now">
-                      пройдено заданий 7/15
-                    </div>
-                    <div class="calendar__header-end">окончание: 05.06.23</div>
-                  </div>
-                  <div class="calendar__body">
-                    <div class="calendar__body-day">
-                      <div class="calendar__body-day-title day">1</div>
-                      <div class="calendar__body-day-title day">2</div>
-                      <div class="calendar__body-day-title day">3</div>
-                      <div class="calendar__body-day-title day">4</div>
-                      <div class="calendar__body-day-title day">5</div>
-                      <div class="calendar__body-day-title day">6</div>
-                      <div class="calendar__body-day-title day">7</div>
-                      <div class="calendar__body-day-title day">8</div>
-                      <div class="calendar__body-day-title day">9</div>
-                      <div class="calendar__body-day-title day">10</div>
-                      <div class="calendar__body-day-title day">11</div>
-                      <div class="calendar__body-day-title day">12</div>
-                      <div class="calendar__body-day-title day">13</div>
-                      <div class="calendar__body-day-title day">14</div>
-                      <div class="calendar__body-day-title day">15</div>
-                    </div>
-                    <div class="calendar__line">
-                      <div class="calendar__line-wrap">
-                        <div class="calendar__line-point"></div>
-                        <div class="calendar__line-point"></div>
-                        <div class="calendar__line-point"></div>
-                        <div class="calendar__line-point"></div>
-                        <div class="calendar__line-point"></div>
-                        <div class="calendar__line-point"></div>
-                        <div class="calendar__line-point"></div>
-                        <div class="calendar__line-point"></div>
-                        <div class="calendar__line-point"></div>
-                        <div class="calendar__line-point"></div>
-                        <div class="calendar__line-point"></div>
-                        <div class="calendar__line-point"></div>
-                        <div class="calendar__line-point"></div>
-                        <div class="calendar__line-point"></div>
-                        <div class="calendar__line-point"></div>
-                      </div>
-                      <div class="calendar__line-hline"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="main__info-wrapper-achievements wrap">
-                <div class="achivments__header main__header">
-                  <div class="achievements">достижения</div>
-                </div>
-              </div>
-              <div class="main__info-wrapper-fine wrap">
-                <div class="fine__header main__header">                  
-										<div class="fine">штраф</div>
-                </div>
-              </div>
-              <div class="main__info-wrapper-award wrap">
-                <div class="award__header main__header"><div class="award">награды</div></div>
-              </div>
+          <div class="main__info-wrapper-fine wrap">
+            <div class="fine__header main__header">                  
+									<div class="fine">штраф</div>
             </div>
           </div>
+          <div class="main__info-wrapper-award wrap">
+            <div class="award__header main__header"><div class="award">награды</div></div>
+          </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section> -->
 
 			<section id="fullbody">
 				<div class="container">
@@ -196,45 +174,48 @@
 							<div class="fullbody__wrapper-left-info">общая информация</div>
 							<div class="fullbody__wrapper-left-telegram">написать в telegram</div>
 							<div class="fullbody__wrapper-left-menu">
-								<div class="menu__wrapper">
-									<div class="menu__wrapper-title">программа курса</div>
-									<div class="menu__wrapper-item" data-file="assets/files/finansovoe-obuchenie.html">
-										финансовое обучение
-									</div>
-									<div class="menu__wrapper-item" data-file="assets/files/test.markdown">
-										техническое обучение
-									</div>									
-								</div>	
+								<div class="menu__wrapper-title">программа курса</div>
+								<div class="menu__wrapper-menu">
+									Задание №1
+									<div class="menu__wrapper-item"
+										data-file="assets/files/finansovoe-obuchenie.html">финансовое обучение</div>
+									<div class="menu__wrapper-item" data-file="assets/files/test.markdown">домашнее
+										задание</div>
+								</div>
+								<div class="menu__wrapper-menu">
+									Задание №1
+									<div class="menu__wrapper-item"
+										data-file="assets/files/finansovoe-obuchenie.html">финансовое обучение</div>
+									<div class="menu__wrapper-item" data-file="assets/files/test.markdown">домашнее
+										задание</div>
+								</div>
 							</div>
 						</div>
+
 						<div class="fullbody__wrapper-right">
-							<div class="fullbody__wrapper-right-header">задание №7</div>
-							<div class="fullbody__wrapper-right-description">техническое обучение</div>
+							<div class="fullbody__wrapper-right-header">Задание № 7</div>
+							<div class="fullbody__wrapper-right-description">Техническое обучение</div>
 							<div class="fullbody__wrapper-right-body">
 								<div id="body-text"></div>
-  <div class="page-buttons">
-    <button id="prev-page" disabled>Назад</button>
-    <span id="current-page"></span>
-    <button id="next-page">Вперед</button>
-  </div>
-			
+								<div class="page-buttons">
+									<button id="prev-page" disabled>Назад</button>
+									<span id="current-page"></span>
+									<button id="next-page">Вперед</button>
+								</div>
 							</div>
 						</div>
-			
 					</div>
 				</div>
 			</section>
+		</div>
 
-
-
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <div id="app_root"></div>
+		<div id="app_root"></div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
-    <script type="text/JavaScript" src="./assets/js/preloader.js"></script>
-    <script src="./assets/js/task.js"></script>
-		<script src="./assets/js/file.js"></script>
-    <script src="./assets/js/main.js"></script>
-		<script src="https://unpkg.com/paginate-js@2.1.0/dist/paginate.min.js"></script>
-  </body>
+
+		<script type="text/JavaScript" src="./assets/js/preloader.js"></script>
+		<script src="dist/bundle.js"></script>
+		<script src="/assets/js/editor.js"></script>
+	</body>
 </html>
